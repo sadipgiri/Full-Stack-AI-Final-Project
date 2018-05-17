@@ -6,12 +6,12 @@
     Created: 26 April, 2018
 """
 
-import tweets_api
-from textblob import TextBlob
-import re
-import threading
-import time
-from talk_to_mongodb import extract_tweets 
+import tweets_api   # inheritating anothet Python3 program
+from textblob import TextBlob   # Textblob module to get sentiments of cryptocurrency
+import re   # regex to filter the returning tweets
+import threading    # threading to run the program asynchronously
+import time 
+from talk_to_mongodb import extract_tweets  # inheritating another program to talk to MOGNGO DB
 
 def clean_tweet(tweet):
     '''
@@ -36,6 +36,7 @@ def analize_sentiment(tweet):
         # return -1
         return "negative"
 
+# another function to finally return the tweets when currency is passed into it
 def return_sentiments(currency):
     tweets = extract_tweets(currency)
     polarity = analize_sentiment(tweets)

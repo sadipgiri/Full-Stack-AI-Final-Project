@@ -8,6 +8,8 @@
 
 from pymongo import MongoClient
 
+# connecting to MongoDB 
+# to extract tweets from Twitter
 def extract_tweets(currency):
     try:
         client = MongoClient('localhost')
@@ -22,6 +24,7 @@ def extract_tweets(currency):
     except Exception as e:
         print ("Unable to connect to database: {0}".format(e))
 
+# entering tweets into MongoDB
 def enter_tweets(currency, tweets):
     try:
         client = MongoClient('localhost')
@@ -31,6 +34,7 @@ def enter_tweets(currency, tweets):
     except expression as identifier:
         print("Unable to conenct to database: {0}".format(e))
 
+# adding particular currencies in my Crypto Studio
 def add_my_currencies(currencies):
     try:
         client = MongoClient('localhost')
@@ -41,6 +45,7 @@ def add_my_currencies(currencies):
     except Exception as e:
         print("Unable to connect to database: {0}".format(e))
 
+# returning crypto currency prices
 def get_my_currencies():
     try:
         client = MongoClient('localhost')
