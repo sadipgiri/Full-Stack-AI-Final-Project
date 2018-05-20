@@ -44,6 +44,7 @@ def return_sentiments(currency):
     return polarity 
 
 if __name__ == '__main__':
+    # test
     s = "Numerous countries are being considered for the MEETING, but would Peace House/Freedom House, on the Border of North & South Korea, be a more Representative, Important and Lasting site than a third party country? Just asking!"
     # bitcoin_tweets = tweets_api.returnTweets("bitcoin")
     # while len(bitcoin_tweets) < 10:

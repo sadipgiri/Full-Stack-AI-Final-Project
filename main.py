@@ -11,6 +11,7 @@ import crypto_api # another python3 program to access crypto prices
 from talk_to_mongodb import add_my_currencies, get_my_currencies # another python3 program to talk to MONGODB
 from sentiments import return_sentiments # another program to calculate sentiment of cryptos
 import time
+#import predictions # for predicting crypto prices using built LSTM deep learning model
 
 # Global Variables to restrict - wrong username or password & to restrict user directly accessing News Feed (that is User Class) without login credentials
 username = ""
@@ -22,6 +23,7 @@ urls = (
     '/login', 'login',
 	'/my_currencies', 'my_currencies',
 	'/currencies_sentiments', 'currencies_sentiments',
+	'/predict', 'predict',
     # '/(.*)', 'hello'
 )
 
@@ -75,6 +77,10 @@ class currencies_sentiments:
 		# print(my_currencies)
 		# print(curr_sentiments)
 		return render_template.currencies_sentiments('bitcoin', sents)
+
+class predict:
+	def GET(self):
+		return render_template.predictions()
 		
 # running the program finally
 if __name__ == "__main__":
