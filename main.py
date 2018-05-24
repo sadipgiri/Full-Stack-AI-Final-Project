@@ -19,7 +19,6 @@ password = ""
 
 # these are the URL endpoints
 urls = (
-	'/diet_diary', 'diet_diary',
     '/login', 'login',
 	'/my_currencies', 'my_currencies',
 	'/currencies_sentiments', 'currencies_sentiments',
